@@ -5,6 +5,9 @@ import { Navbar } from "./components/Navbar";
 import { MobileMenu } from "./components/MobileMenu";
 import { Home } from "./components/sections/Home";
 import { About } from "./components/sections/About";
+import { Experience } from "./components/sections/Experience";
+import { Skills } from "./components/sections/Skills";
+import { Certifications } from "./components/sections/Certifications";
 import { Projects } from "./components/sections/Projects";
 import "./index.css";
 import { Contact } from "./components/sections/Contact";
@@ -25,6 +28,9 @@ function App() {
         <MobileMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
         <Home />
         <About />
+        <Experience />
+        <Skills />
+        <Certifications />
         <Projects />
         <Contact />
       </div>

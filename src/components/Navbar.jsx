@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import PropTypes from "prop-types";
 
 export const Navbar = ({ menuOpen, setMenuOpen }) => {
   useEffect(() => {
@@ -10,7 +11,7 @@ export const Navbar = ({ menuOpen, setMenuOpen }) => {
         <div className="flex justify-between items-center h-16">
           <a href="#home" className="font-mono text-xl font-bold text-white">
             {" "}
-            pedro<span className="text-blue-500">.tech</span>{" "}
+            laukik<span className="text-blue-500">.xyz</span>{" "}
           </a>
 
           <div
@@ -23,28 +24,49 @@ export const Navbar = ({ menuOpen, setMenuOpen }) => {
           <div className="hidden md:flex items-center space-x-8">
             <a
               href="#home"
-              className="text-gray-300 hove:text-white transition-colors"
+              className="text-gray-300 hover:text-white transition-colors"
             >
               {" "}
               Home
             </a>
             <a
               href="#about"
-              className="text-gray-300 hove:text-white transition-colors"
+              className="text-gray-300 hover:text-white transition-colors"
             >
               {" "}
               About{" "}
             </a>
             <a
+              href="#experience"
+              className="text-gray-300 hover:text-white transition-colors"
+            >
+              {" "}
+              Experience{" "}
+            </a>
+            <a
+              href="#skills"
+              className="text-gray-300 hover:text-white transition-colors"
+            >
+              {" "}
+              Skills{" "}
+            </a>
+            <a
+              href="#certifications"
+              className="text-gray-300 hover:text-white transition-colors"
+            >
+              {" "}
+              Certifications{" "}
+            </a>
+            <a
               href="#projects"
-              className="text-gray-300 hove:text-white transition-colors"
+              className="text-gray-300 hover:text-white transition-colors"
             >
               {" "}
               Projects{" "}
             </a>
             <a
               href="#contact"
-              className="text-gray-300 hove:text-white transition-colors"
+              className="text-gray-300 hover:text-white transition-colors"
             >
               {" "}
               Contact{" "}
@@ -54,4 +76,9 @@ export const Navbar = ({ menuOpen, setMenuOpen }) => {
       </div>
     </nav>
   );
+};
+
+Navbar.propTypes = {
+  menuOpen: PropTypes.bool.isRequired,
+  setMenuOpen: PropTypes.func.isRequired,
 };

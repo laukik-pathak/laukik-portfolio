@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
+import PropTypes from "prop-types";
 
 export const LoadingScreen = ({ onComplete }) => {
   const [text, setText] = useState("");
-  const fullText = "<Hello Wolrd />";
+  const fullText = "<Hello World />";
 
   useEffect(() => {
     let index = 0;
@@ -33,4 +34,8 @@ export const LoadingScreen = ({ onComplete }) => {
       </div>
     </div>
   );
+};
+
+LoadingScreen.propTypes = {
+  onComplete: PropTypes.func.isRequired,
 };

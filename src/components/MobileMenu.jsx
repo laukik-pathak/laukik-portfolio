@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import PropTypes from "prop-types";
 
 export const MobileMenu = ({ menuOpen, setMenuOpen }) => {
   return (
@@ -46,6 +46,39 @@ export const MobileMenu = ({ menuOpen, setMenuOpen }) => {
         About
       </a>
       <a
+        href="#experience"
+        onClick={() => setMenuOpen(false)}
+        className={`text-2xl font-semibold text-white my-4 transform transition-transform duration-300
+            ${
+              menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
+            }        
+    `}
+      >
+        Experience
+      </a>
+      <a
+        href="#skills"
+        onClick={() => setMenuOpen(false)}
+        className={`text-2xl font-semibold text-white my-4 transform transition-transform duration-300
+            ${
+              menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
+            }        
+    `}
+      >
+        Skills
+      </a>
+      <a
+        href="#certifications"
+        onClick={() => setMenuOpen(false)}
+        className={`text-2xl font-semibold text-white my-4 transform transition-transform duration-300
+            ${
+              menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
+            }        
+    `}
+      >
+        Certifications
+      </a>
+      <a
         href="#projects"
         onClick={() => setMenuOpen(false)}
         className={`text-2xl font-semibold text-white my-4 transform transition-transform duration-300
@@ -69,4 +102,9 @@ export const MobileMenu = ({ menuOpen, setMenuOpen }) => {
       </a>
     </div>
   );
+};
+
+MobileMenu.propTypes = {
+  menuOpen: PropTypes.bool.isRequired,
+  setMenuOpen: PropTypes.func.isRequired,
 };
